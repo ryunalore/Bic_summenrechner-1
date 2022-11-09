@@ -1,0 +1,7 @@
+- name: Copy to staging
+      run: mkdir statging && cp target/*.jar staging
+    - name: upload
+      uses: actions/upload-artifact@v3
+      with: 
+        name: Summenrechner.jar
+        path: staging
